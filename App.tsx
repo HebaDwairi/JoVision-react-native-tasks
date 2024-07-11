@@ -1,10 +1,34 @@
+import React from 'react';
+import Task16 from './Tasks/Task16.js';
+
+export default function App(){
+  return(
+    <Task16></Task16>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
  * @format
  */
-
+/*
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
@@ -78,7 +102,7 @@ function App(): React.JSX.Element {
           }}>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+            screen and then come back to see your edits. IT'S FUCKING WORKING!
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
@@ -116,3 +140,5 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+*/
+
