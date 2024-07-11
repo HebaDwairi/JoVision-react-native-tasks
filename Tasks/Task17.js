@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Button, StyleSheet, View, Text} from 'react-native';
-const Task16 = ()=>{
+const Task17 = ()=>{
     const [show, setShow] = useState(0);
     const [title, setTitle] = useState('Show');
     const showText = ()=>{
@@ -29,4 +29,4 @@ const style = StyleSheet.create({
         alignItems:'center',
     },
 });
-export default Task16;
+export default Task17;
