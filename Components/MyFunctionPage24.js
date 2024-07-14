@@ -2,7 +2,7 @@ import React, {forwardRef,useImperativeHandle,useState} from 'react';
 import {StyleSheet, Text} from 'react-native';
 
 const MyFunctionPage24 = forwardRef((props, ref) =>{
-    const [text,setText] = useState("This is MyFunctionPage component ")
+    const [text,setText] = useState("This is MyFunctionPage component ");
     useImperativeHandle(ref, () => ({
         changeText(newText) {
             setText(newText);

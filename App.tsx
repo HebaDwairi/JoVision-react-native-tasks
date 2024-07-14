@@ -8,6 +8,7 @@ import Task21 from './Tasks/Task21.js';
 import Task22 from './Tasks/Task22.js';
 import Task23 from './Tasks/Task23.js';
 import Task24 from './Tasks/Task24.js';
+import Task25 from './Tasks/Task25.js';
 export default function App(){
   return(
     //<Task16></Task16>
@@ -18,6 +19,7 @@ export default function App(){
     //<Task21></Task21>
     //<Task22></Task22>
     //<Task23></Task23>
-    <Task24></Task24>
+    //<Task24></Task24>
+    <Task25></Task25>
   );
 }
