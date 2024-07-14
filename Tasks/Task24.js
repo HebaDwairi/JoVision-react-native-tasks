@@ -1,31 +1,28 @@
-import React, {useEffect} from 'react';
-import {StyleSheet, Text, View,TextInput} from 'react-native';
+import React, {useState,useRef} from 'react';
+import { StyleSheet, View, Text,TextInput} from 'react-native';
+import MyFunctionPage24 from '../Components/MyFunctionPage24.js';
 
-const MyFunctionPage = ({text,setText})=>{
+const Task24 = ()=>{
+    const [text, setText] = useState('input box');
+    const ref = useRef(null);
     const onChangeText = (newText)=>{
         setText(newText);
+        ref.current.changeText(newText);
     }
-    useEffect(()=>{
-        console.log("myFunctionPage loaded");
-        return()=>{
-            console.log("myFunctionPage unloaded");
-        }
-    },[]);
     return(
         <View style={style.container}>
-            <Text style={style.text}>This is myFunctionPage component</Text>
             <TextInput
             value={text}
             style={style.text}
             onChangeText={onChangeText}
             />
+            <MyFunctionPage24 ref={ref} />
         </View>
     );
 }
 
 const style = StyleSheet.create({
     text: {
-        fontWeight: 'bold',
         fontSize: 17,
         justifyContent:'center',
         backgroundColor: 'white',
@@ -36,9 +33,13 @@ const style = StyleSheet.create({
         width:340
     },
     container: {
-        backgroundColor:'#98b89a',
+        backgroundColor:'#88b89a',
         borderRadius:10,
         padding:9,
+        justifyContent:'center',
+        margin:10,
+        flex:1,
+        
     }
 });
-export default MyFunctionPage;
+export default Task24;
