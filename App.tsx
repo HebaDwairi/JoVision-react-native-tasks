@@ -4,12 +4,16 @@ import Task17 from './Tasks/Task17.js';
 import Task18 from './Tasks/Task18.js';
 import Task19 from './Tasks/Task19.js';
 import Task20 from './Tasks/Task20.js';
+import Task21 from './Tasks/Task21.js';
+import Task22 from './Tasks/Task22.js';
 export default function App(){
   return(
     //<Task16></Task16>
    //<Task17></Task17>
    //<Task18></Task18>
     //<Task19></Task19>
-    <Task20></Task20>
+    //<Task20></Task20>
+    //<Task21></Task21>
+    <Task22></Task22>
   );
 }
