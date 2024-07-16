@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { StyleSheet, View, Text,Image,TouchableOpacity,Alert} from 'react-native';
 
 const Task27 = ()=>{
-    const [img, setImg] = useState('../Resources/papilio.jpeg');
+    const [img, setImg] = useState(require('../Resources/papilio.jpeg'));
     const chooseImage = ()=>{
         Alert.alert(
             'img selection',
