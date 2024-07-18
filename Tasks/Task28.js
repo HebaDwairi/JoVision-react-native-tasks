@@ -12,10 +12,12 @@ const Item = ({src,index})=>{
     );
 }
 const Task28 = ()=>{
+
     return(
         <View style={style.container}>
             <FlatList data={DATA}
             renderItem={({item,index}) => <Item src={item.src} index={index}/>}
+            horizontal={true}
             >
             </FlatList>
         </View>
@@ -25,7 +27,7 @@ const Task28 = ()=>{
 const DATA =[
     {
         id:'1',
-        src: require('../Resources/cabbageWhite.jpeg'),
+        src: require('../Resources/linum.jpeg'),
     },
     {
         id:'2',
@@ -41,7 +43,7 @@ const DATA =[
     },
     {
         id:'5',
-        src: require('../Resources/moth.jpeg'),
+        src: require('../Resources/snail.jpeg'),
     },
     {
         id:'6',
@@ -79,20 +81,24 @@ const style = StyleSheet.create({
     },
     container: {
         flex: 1,
-        justifyContent:'flex-start',
+        justifyContent:'center',
         alignItems:'center',
-        backgroundColor:'#233620'
+        backgroundColor:'#233620',
+        paddingBottom:30,
+        paddingTop:35,
     },
     img: {
         width:320,
-        height:320,
+        height:660,
         borderRadius:10,
     },
     btn: {
         backgroundColor:'#497856',
-        padding:10,
+        padding:20,
         borderRadius:10,
-        margin:10,
+        margin:20,
+        justifyContent:'center',
+        alignItems:'center',
     }
 });
 export default Task28;
