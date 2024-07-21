@@ -19,7 +19,7 @@ import Task32 from './Tasks/Task32.js';
 import Task33 from './Tasks/Task33.js';
 import Task34 from './Tasks/Task34.js';
 import Task35 from './Tasks/Task35.js';
-//import Task36 from './Tasks/Task36.js';
+import Task36 from './Tasks/Task36.js';
 //import Task37 from './Tasks/Task37.js';
 //import Task38 from './Tasks/Task38.js';
 export default function App(){
@@ -43,8 +43,8 @@ export default function App(){
     //<Task32></Task32>
     //<Task33></Task33>
     //<Task34></Task34>
-    <Task35></Task35>
-    //<Task36></Task36>
+    //<Task35></Task35>
+    <Task36></Task36>
     //<Task37></Task37>
   );
 }
