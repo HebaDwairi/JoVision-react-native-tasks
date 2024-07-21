@@ -16,7 +16,6 @@ const Item = ({src,index,array,setArray})=>{
         }
         temp.splice(index,0,elem);
         setArray(temp);
-        console.log(elem.id)
     }
     return(
         <Pressable onPress={alertIndex} style={style.btn2} >
