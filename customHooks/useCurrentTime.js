@@ -9,7 +9,7 @@ const useCurrentTime = ()=>{
             setDate(d.toLocaleDateString());
         }
         const interval = setInterval(update, 1000);
-        return () =>{
+        return ()=>{
             clearInterval(interval);
         }
     },[]);
