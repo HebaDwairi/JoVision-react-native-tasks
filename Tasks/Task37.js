@@ -14,7 +14,7 @@ function generateRandomWord(words) {
 	return result;
 }
 
-const Task36 = () =>{
+const Task37 = () =>{
     const [refreshing, setRefreshing] = useState(false);
     const refresh = ()=>{
         setRefreshing(true);
@@ -48,4 +48,4 @@ const style = StyleSheet.create({
         borderRadius:10,
     }
 });
-export default Task36;
+export default Task37;
