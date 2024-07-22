@@ -1,4 +1,4 @@
-import React, {useState,useRef, useEffect} from 'react';
+import React from 'react';
 import { StyleSheet, View, Text,ScrollView} from 'react-native';
 function generateRandomWord(words) {
 	let result = '';
@@ -22,7 +22,7 @@ const Task36 = () =>{
     }
     return(
         <View style={style.container}>
-            <ScrollView>
+            <ScrollView >
                 {list}
             </ScrollView>
         </View>

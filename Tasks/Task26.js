@@ -1,14 +1,19 @@
 import React, {useState,useEffect} from 'react';
-import {Button, StyleSheet, View, Text} from 'react-native';
+import {Button, StyleSheet, View, Text,ActivityIndicator} from 'react-native';
 
 const Task26 = ()=>{
     const [text,setText] = useState('ip ');
+    const [loading,setLoading] = useState(false);
+    
     const getIpBlocking = async()=>{
+        setLoading(true);
         try{
             fetch("https://api.ipify.org?format=json")
             .then((response) => response.json())
             .then((data) => {
-            setText(data.ip);})
+            setText(data.ip);
+            setLoading(false);
+            });
         }
         catch(err){
             alert(err);
@@ -16,7 +21,7 @@ const Task26 = ()=>{
     }
     const getIpNonBlocking = async()=>{
         try{
-            let fetchRes = await fetch("https://api.ipify.org?format=json");
+            const fetchRes = await fetch("https://api.ipify.org?format=json");
             resText = await fetchRes.json();
             setText(resText.ip);
         }
@@ -24,11 +29,15 @@ const Task26 = ()=>{
             alert(err);
         }
     }
-    return(
-        <View style={style.container}>
-            <Button title='first btn' onPress={getIpNonBlocking} color={'#5cad95'}></Button>
-            <Button title='second btn' onPress={getIpBlocking} color={'#5cad95'}></Button>
-            <Text style={style.text}>{text}</Text>
+    return(  
+        <View style={style.container}>   
+            {loading ? <ActivityIndicator size={'large'}/>:
+            <View>
+                <Button title='first btn' onPress={getIpNonBlocking} color={'#5cad95'}></Button>
+                <Button title='second btn' onPress={getIpBlocking} color={'#5cad95'}></Button>
+                <Text style={style.text}>{text}</Text>
+            </View>
+           }
         </View>
     );
 }
