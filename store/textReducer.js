@@ -1,5 +1,5 @@
 const initialState = {
-    text:'inputtext',
+    text:'',
 }
 export const change = (text) => ({
     type: 'CHANGE',
