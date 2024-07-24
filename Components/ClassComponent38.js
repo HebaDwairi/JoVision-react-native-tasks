@@ -1,6 +1,6 @@
 import React ,{Component} from 'react';
 import { Text, StyleSheet} from 'react-native';
-import { TextContext } from './textContext';
+import { TextContext } from './TextContext.js';
 class ClassComponent extends Component {
     static contextType = TextContext;
     render(){

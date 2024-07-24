@@ -1,7 +1,7 @@
 import React,{useContext, useState} from 'react';
 import { View,StyleSheet} from 'react-native';
 import FunctionalComponent from '../Components/FunctionalComponent38';
-import { TextContext } from '../Components/textContext';
+import { TextContext } from '../Components/TextContext.js';
 
 const Task38 = () => {
     const [text, setText] = useState('ClassComponent text');

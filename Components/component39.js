@@ -1,16 +1,20 @@
-import React, {useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import { StyleSheet,TextInput, View} from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 
 const TextInputComponent = () => {
     const dispatch = useDispatch();
     const t = useSelector((state)=>state.text);
+    const [text,setText]= useState(t);
     const changeState = (input)=>{
-        dispatch({ type: 'CHANGE', payload:input });
+        setText(input);
     }
+    useEffect(()=>{
+        return ()=>{dispatch({ type: 'CHANGE', payload:text })};
+    },[dispatch,text])
     return(
         <View style={style.container}>
-            <TextInput style={style.textinput} onChangeText={changeState}>{t}</TextInput>
+            <TextInput style={style.textinput} onChangeText={changeState}>{text}</TextInput>
         </View>
     );
 }

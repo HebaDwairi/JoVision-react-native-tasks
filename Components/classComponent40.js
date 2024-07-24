@@ -4,19 +4,28 @@ import { connect } from 'react-redux';
 import {change} from '../store/textReducer.js'
 
 class TextInputComponent extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            text:this.props.prevText,
+        }
+    }
     changeText = (input )=>{
-        this.props.change(input);
+        this.setState({text:input});
+    }
+    componentWillUnmount(){
+        this.props.change(this.state.text);
     }
     render(){
         return(
             <View style={style.container}>
-                <TextInput style={style.textinput} onChangeText={this.changeText} value={this.props.text}/>
+                <TextInput style={style.textinput} onChangeText={this.changeText} value={this.state.text}/>
             </View>
         );
     }
 }
 const mapStateToProps =(state) =>({
-    text: state.text,
+    prevText: state.text,
 });
 const mapDispatchToProps = {
     change,

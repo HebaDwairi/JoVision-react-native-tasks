@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { StyleSheet,TextInput, View} from 'react-native';
 import ClassComponent from './ClassComponent38';
-import { TextContext } from './textContext';
+import { TextContext } from './TextContext.js';
 const FunctionalComponent = () => {
     const {text,setText} = useContext(TextContext);
     return(
